@@ -1,0 +1,2 @@
+$ii = 0
+(Get-Content new2.asp) | Foreach-Object {if($_ -match '"1"'){$ii++};$_.replace('"1"','"'+$ii+'"');}  | sc new2.asp
